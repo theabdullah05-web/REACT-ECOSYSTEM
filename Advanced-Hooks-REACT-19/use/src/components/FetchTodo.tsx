@@ -14,7 +14,7 @@ const FetchTodo = () => {
       if(!result){
         throw new Error("Network response was not ok")
       }
-            const result=res.json()
+      const result=res.json()
     }
     }
   },[])
