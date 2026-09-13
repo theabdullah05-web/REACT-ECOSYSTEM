@@ -1,7 +1,7 @@
 import { use } from "react";
 const fetchData = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-  return res.json();
+  return await res.json();
 };
 const useFetchTodo = () => {
   const data = use(fetchData());
