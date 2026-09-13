@@ -4,7 +4,7 @@ import UseFetchTodo from "./components/useFetchTodo";
 
 const App = () => {
   return (
-    <Suspense>
+    <Suspense fallback={<h1>Loading...</h1>}>
       <UseFetchTodo />
     </Suspense>
   );
