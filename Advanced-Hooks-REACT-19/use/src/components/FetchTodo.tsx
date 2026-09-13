@@ -23,7 +23,10 @@ const FetchTodo = () => {
       }
     };
   }, []);
-  return <>Abdullah</>;
+  if (loading) {
+    return <h2>Loading...</h2>;
+  }
+  return <h2>{data?.title}</h2>;
 };
 
 export default FetchTodo;
