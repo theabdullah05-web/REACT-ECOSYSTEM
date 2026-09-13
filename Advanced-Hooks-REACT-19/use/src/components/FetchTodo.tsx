@@ -22,6 +22,7 @@ const FetchTodo = () => {
         setLoading(false);
       }
     };
+    fetchData();
   }, []);
   if (loading) {
     return <h2>Loading...</h2>;
