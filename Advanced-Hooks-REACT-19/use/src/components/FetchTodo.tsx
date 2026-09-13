@@ -1,5 +1,5 @@
 const FetchTodo = () => {
-  return <div>FetchTodo</div>;
+  return <></>;
 };
 
 export default FetchTodo;
