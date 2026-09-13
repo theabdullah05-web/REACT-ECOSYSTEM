@@ -6,8 +6,7 @@ const FetchTodo = () => {
   }
   const [data, setData] = useState<data | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
-  return;
-  <>Abdullah</>;
+  return <>Abdullah</>;
 };
 
 export default FetchTodo;
