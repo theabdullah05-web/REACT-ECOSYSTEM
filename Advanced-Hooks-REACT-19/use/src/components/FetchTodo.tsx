@@ -25,9 +25,9 @@ const FetchTodo = () => {
     fetchData();
   }, []);
   if (loading) {
-    return <h2>Loading...</h2>;
+    return <p>Loading...</p>;
   }
-  return <h2>{data?.title}</h2>;
+  return <p>{data?.title}</p>;
 };
 
 export default FetchTodo;
