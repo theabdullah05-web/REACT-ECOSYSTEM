@@ -1,5 +1,7 @@
+import FetchTodo from "./components/FetchTodo";
+
 const App = () => {
-  return <div>App</div>;
+  return <FetchTodo />;
 };
 
 export default App;
