@@ -1,7 +1,7 @@
 import { useActionState } from "react";
 
 const Counter = () => {
-  const increment = async (previousState, formData) => {
+  const increment = async (previousState: number, formData: FormData) => {
     console.log(formData.get("name"));
     return previousState + 1;
   };
