@@ -1,14 +1,14 @@
 const Form = () => {
   return (
     <form>
-      <label htmlFor="">Name</label>
-      <input />
+      <label htmlFor="name">Name</label>
+      <input name="name" id="name" type="text" />
       <br />
-      <label htmlFor="">Email</label>
-      <input />
+      <label htmlFor="email">Email</label>
+      <input name="email" id="email" type="text" />
       <br />
       <label htmlFor="">Password</label>
-      <input />
+      <input name="password" id="password" type="password" />
       <br />
       <button>Submit</button>
     </form>
