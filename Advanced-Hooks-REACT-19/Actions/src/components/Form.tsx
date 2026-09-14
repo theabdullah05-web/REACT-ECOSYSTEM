@@ -1,3 +1,5 @@
+import SubmitButton from "./SubmitButton";
+
 const Form = () => {
   const formAction = (formData: any) => {
     const userData = {
@@ -18,7 +20,7 @@ const Form = () => {
       <label htmlFor="">Password</label>
       <input name="password" id="password" type="password" />
       <br />
-      <button>Submit</button>
+      <SubmitButton />
     </form>
   );
 };
