@@ -1,7 +1,10 @@
 import SubmitButton from "./SubmitButton";
 
 const Form = () => {
-  const formAction = (formData: any) => {
+  const formAction = async (formData: any) => {
+    await new Promise<void>((resolve) => {
+      setTimeout(resolve, 3000);
+    });
     const userData = {
       name: formData.get("name"),
       email: formData.get("email"),
