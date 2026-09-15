@@ -8,15 +8,13 @@ const Todo = () => {
   const dispatch = useDispatch();
   const [state, setState] = useState<string>("");
   return (
-    <>
+    <form
+      onSubmit={() => {
+        (dispatch(addTodo(state)), setState(""));
+      }}
+    >
       <input value={state} onChange={(e) => setState(e.target.value)} />
-      <button
-        onClick={() => {
-          (dispatch(addTodo(state)), setState(""));
-        }}
-      >
-        Add
-      </button>
+      <button>Add</button>
       <ul>
         {todo.map(
           (el) =>
@@ -38,7 +36,7 @@ const Todo = () => {
             ),
         )}
       </ul>
-    </>
+    </form>
   );
 };
 
