@@ -25,16 +25,15 @@ export const todoSlice = createSlice({
   reducers: {
     addTodo: (state, action: PayloadAction<string>) => {
       state.value.push({
-        id: Date.now(),
+        id: Math.random(),
         task: action.payload,
         isDone: false,
       });
     },
     markAsDone: (state, action: PayloadAction<number>) => {
-      const todo = state.value.find((item) => item.id === action.payload);
-      if (todo) {
-        todo.isDone = true;
-      }
+      state.value.map((el) =>
+        el.id == action.payload ? (el.isDone = true) : el,
+      );
     },
   },
 });
