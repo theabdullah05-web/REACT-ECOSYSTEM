@@ -6,15 +6,15 @@ export interface CounterState {
     id: number;
     task: string;
     isDone: boolean;
-  };
+  }[];
 }
 
-const initialState: CounterState = {
+const initialState: CounterState = {[
   value: {
     id: 0,
     task: "",
     isDone: false,
-  },
+  }]
 };
 
 export const todoSlice = createSlice({
