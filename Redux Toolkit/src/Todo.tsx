@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "./app/store";
-import { addTodo } from "./features/todo/todoSlice";
+import { addTodo, deleteTodo } from "./features/todo/todoSlice";
 import { useState } from "react";
 
 const Todo = () => {
@@ -17,7 +17,9 @@ const Todo = () => {
             el.task !== "" && (
               <li key={el.id}>
                 {el.task}
-                <button></button>
+                <button onClick={() => dispatch(deleteTodo(el.id))}>
+                  Delete
+                </button>
               </li>
             ),
         )}
