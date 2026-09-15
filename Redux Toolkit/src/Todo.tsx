@@ -7,12 +7,11 @@ const Todo = () => {
   const todo = useSelector((state: RootState) => state.todo.value);
   const dispatch = useDispatch();
   const [state, setState] = useState<string>("");
+  const handleSubmit = () => {
+    (dispatch(addTodo(state)), setState(""));
+  };
   return (
-    <form
-      onSubmit={() => {
-        (dispatch(addTodo(state)), setState(""));
-      }}
-    >
+    <form onSubmit={handleSubmit}>
       <input value={state} onChange={(e) => setState(e.target.value)} />
       <button>Add</button>
       <ul>
