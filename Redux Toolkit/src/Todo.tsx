@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "./app/store";
-import { addTodo, deleteTodo } from "./features/todo/todoSlice";
+import { addTodo, deleteTodo, markAsDone } from "./features/todo/todoSlice";
 import { useState } from "react";
 
 const Todo = () => {
@@ -24,6 +24,9 @@ const Todo = () => {
                 {el.task}
                 <button onClick={() => dispatch(deleteTodo(el.id))}>
                   Delete
+                </button>
+                <button onClick={() => dispatch(markAsDone(el.id))}>
+                  Mark As Done
                 </button>
               </li>
             ),
