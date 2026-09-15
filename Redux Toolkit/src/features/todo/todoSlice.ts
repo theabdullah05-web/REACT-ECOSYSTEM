@@ -31,6 +31,6 @@ export const todoSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { addTodo, markAsDone } = todoSlice.actions;
 
-export default counterSlice.reducer;
+export default todoSlice.reducer;
