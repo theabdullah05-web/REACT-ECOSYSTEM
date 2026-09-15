@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "./app/store";
 import { addTodo, deleteTodo, markAsDone } from "./features/todo/todoSlice";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 const Todo = () => {
   const todo = useSelector((state: RootState) => state.todo.value);
   const dispatch = useDispatch();
   const [state, setState] = useState<string>("");
-  const handleSubmit = () => {
-    (dispatch(addTodo(state)), setState(""));
+  const handleSubmit = (e: FormEvent) => {
+    e.target.preventDefault()(dispatch(addTodo(state)), setState(""));
   };
   return (
     <form onSubmit={handleSubmit}>
