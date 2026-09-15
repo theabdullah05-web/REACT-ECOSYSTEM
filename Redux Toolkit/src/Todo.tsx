@@ -12,9 +12,7 @@ const Todo = () => {
       <input value={state} onChange={(e) => setState(e.target.value)} />
       <button onClick={() => dispatch(addTodo(state))}>Add</button>
       <ul>
-        {todo.map((el) => (
-          <li key={el.id}>{el.task}</li>
-        ))}
+        {todo.map((el) => el.task !== "" && <li key={el.id}>{el.task}</li>)}
       </ul>
     </>
   );
