@@ -8,7 +8,9 @@ const Todo = () => {
   const dispatch = useDispatch();
   const [state, setState] = useState<string>("");
   const handleSubmit = (e: FormEvent) => {
-    e.target.preventDefault()(dispatch(addTodo(state)), setState(""));
+    e.preventDefault();
+    dispatch(addTodo(state));
+    setState("");
   };
   return (
     <form onSubmit={handleSubmit}>
