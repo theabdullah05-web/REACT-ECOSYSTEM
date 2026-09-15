@@ -6,7 +6,7 @@ import { useState } from "react";
 const Counter = () => {
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
-  const [state, setState] = useState<number | InputEvent>();
+  const [state, setState] = useState<string>("");
   return (
     <>
       <h2>{count}</h2>
