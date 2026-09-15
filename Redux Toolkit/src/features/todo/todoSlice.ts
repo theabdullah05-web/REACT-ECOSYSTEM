@@ -36,7 +36,7 @@ export const todoSlice = createSlice({
       );
     },
     deleteTodo: (state, action: PayloadAction<number>) => {
-      state.value.filter((el) => el.id !== action.payload);
+      state.value = state.value.filter((el) => el.id !== action.payload);
     },
   },
 });
