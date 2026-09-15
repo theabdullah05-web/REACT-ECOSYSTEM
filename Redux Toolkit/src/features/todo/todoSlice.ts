@@ -9,12 +9,14 @@ export interface CounterState {
   }[];
 }
 
-const initialState: CounterState = {[
-  value: {
-    id: 0,
-    task: "",
-    isDone: false,
-  }]
+const initialState: CounterState = {
+  value: [
+    {
+      id: 0,
+      task: "",
+      isDone: false,
+    },
+  ],
 };
 
 export const todoSlice = createSlice({
@@ -22,10 +24,17 @@ export const todoSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action: PayloadAction<string>) => {
-      state.value.task = action.payload;
+      state.value.push({
+        id: Date.now(),
+        task: action.payload,
+        isDone: false,
+      });
     },
-    markAsDone: (state) => {
-      state.value.isDone = true;
+    markAsDone: (state, action: PayloadAction<number>) => {
+      const todo = state.value.find((item) => item.id === action.payload);
+      if (todo) {
+        todo.isDone = true;
+      }
     },
   },
 });
