@@ -13,10 +13,7 @@ const Todo = () => {
       <button onClick={() => dispatch(addTodo(state))}>Add</button>
       <ul>
         {todo.map((el) => (
-          <li key={el.id}>
-            {el.task}
-            <button onClick={() => dispatch()}>Delete</button>
-          </li>
+          <li key={el.id}>{el.task}</li>
         ))}
       </ul>
     </>
