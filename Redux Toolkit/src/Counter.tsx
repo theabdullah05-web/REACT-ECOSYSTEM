@@ -17,7 +17,7 @@ const Counter = () => {
       <button onClick={() => dispatch(increment())}>+</button>
       <button onClick={() => dispatch(decrement())}>-</button>
       <input value={state} onChange={(e) => setState(e.target.value)} />
-      <button onClick={() => setState(incrementByAmount(state))}>
+      <button onClick={() => dispatch(incrementByAmount(state))}>
         Add this Number
       </button>
     </>
