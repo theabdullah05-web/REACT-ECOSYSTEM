@@ -15,7 +15,12 @@ const Todo = () => {
         {todo.map(
           (el) =>
             el.task !== "" && (
-              <li key={el.id}>
+              <li
+                key={el.id}
+                style={{
+                  textDecoration: el.isDone == true ? "line-through" : "none",
+                }}
+              >
                 {el.task}
                 <button onClick={() => dispatch(deleteTodo(el.id))}>
                   Delete
