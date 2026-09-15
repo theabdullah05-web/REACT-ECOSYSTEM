@@ -1,12 +1,16 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "./app/store";
+import { addTodo } from "./features/todo/todoSlice";
+import { useState } from "react";
 
 const Todo = () => {
   const todo = useSelector((state: RootState) => state.todo.value);
+  const dispatch = useDispatch();
+  const [state, setState] = useState<string>("");
   return (
     <>
-      <input />
-      <button>Add</button>
+      <input value={state} onChange={(e) => setState(e.target.value)} />
+      <button onClick={() => dispatch(addTodo(state))}>Add</button>
       <ul>
         <li key={todo.id}>{todo.task}</li>
       </ul>
