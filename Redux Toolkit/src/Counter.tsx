@@ -10,13 +10,13 @@ import { useState } from "react";
 const Counter = () => {
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
-  const [state, setState] = useState<any>();
+  const [state, setState] = useState<number>(0);
   return (
     <>
       <h2>{count}</h2>
       <button onClick={() => dispatch(increment())}>+</button>
       <button onClick={() => dispatch(decrement())}>-</button>
-      <input value={state} onChange={(e) => setState(e.target.value)} />
+      <input value={state} onChange={(e) => setState(Number(e.target.value))} />
       <button onClick={() => dispatch(incrementByAmount(state))}>
         Add this Number
       </button>
