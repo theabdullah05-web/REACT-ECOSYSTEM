@@ -6,9 +6,7 @@ const Todo = () => {
   return (
     <>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li key={todo.id}>{todo.task}</li>
       </ul>
     </>
   );
