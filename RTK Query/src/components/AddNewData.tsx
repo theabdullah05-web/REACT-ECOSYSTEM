@@ -20,9 +20,9 @@ const AddNewData = () => {
     <>
       {data ? (
         <>
-          <p></p>
-          <p></p>
-          <p></p>
+          <p>{data.id}</p>
+          <p>{data.title}</p>
+          <p>{data.description}</p>
         </>
       ) : (
         <></>
