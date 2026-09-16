@@ -1,7 +1,7 @@
-import AddNewData from "./components/AddNewData";
+import UpdateData from "./components/UpdateData";
 
 const App = () => {
-  return <AddNewData />;
+  return <UpdateData />;
 };
 
 export default App;
