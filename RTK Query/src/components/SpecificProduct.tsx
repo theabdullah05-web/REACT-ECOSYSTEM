@@ -3,6 +3,7 @@ import { useGetProductByIdQuery } from "../services/dummyData";
 
 const SpecificProduct = () => {
   const [num, setNum] = useState<string>("");
+  const [productId, setProductId] = useState<number>(1);
   const { data, error, isLoading } = useGetProductByIdQuery(parseInt(1));
   if (error) {
     return <h1>Some Error Occured</h1>;
@@ -15,7 +16,7 @@ const SpecificProduct = () => {
     if (Number.isNaN(id) || id <= 0) {
       return;
     }
-    useGetProductByIdQuery(id);
+    setProductId(id);
   };
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setNum(e.target.value);
