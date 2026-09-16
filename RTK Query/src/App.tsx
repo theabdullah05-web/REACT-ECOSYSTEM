@@ -1,7 +1,7 @@
-import AllData from "./components/AllData";
+import SpecificProduct from "./components/SpecificProduct";
 
 const App = () => {
-  return <AllData />;
+  return <SpecificProduct />;
 };
 
 export default App;
