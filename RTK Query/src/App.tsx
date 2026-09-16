@@ -1,7 +1,7 @@
-import SpecificProduct from "./components/SpecificProduct";
+import AddNewData from "./components/AddNewData";
 
 const App = () => {
-  return <SpecificProduct />;
+  return <AddNewData
 };
 
 export default App;
