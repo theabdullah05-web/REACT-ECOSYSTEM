@@ -3,7 +3,7 @@ import { useGetProductByIdQuery } from "../services/dummyData";
 
 const SpecificProduct = () => {
   const [num, setNum] = useState<string>("");
-  const { data, error, isLoading } = useGetProductByIdQuery(parseInt(num));
+  const { data, error, isLoading } = useGetProductByIdQuery(parseInt(1));
   if (error) {
     return <h1>Some Error Occured</h1>;
   } else if (isLoading) {
