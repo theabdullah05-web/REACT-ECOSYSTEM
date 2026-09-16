@@ -3,14 +3,6 @@ type Product = {
   id: number;
   title: string;
   description: string;
-  category: string;
-  price: number;
-  discountPercentage: number;
-  rating: number;
-  stock: number;
-  brand: string;
-  thumbnail: string;
-  images: string[];
 };
 
 type ProductsResponse = {
@@ -28,6 +20,13 @@ export const productApi = createApi({
     }),
     getProductById: builder.query<Product, number>({
       query: (id) => `/products/${id}`,
+    }),
+    addNewProduct: builder.mutation<Product, Product>({
+      query: ({ id, ...newData }) => ({
+        url: `post/${id}`,
+        method: "Post",
+        body: newData,
+      }),
     }),
   }),
 });
