@@ -4,6 +4,11 @@ import { useGetProductByIdQuery } from "../services/dummyData";
 const SpecificProduct = () => {
   const [num, setNum] = useState<string>("0");
   const { data } = useGetProductByIdQuery(parseInt(num));
+  if (error) {
+    return <h1>Some Error Occured</h1>;
+  } else if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     useGetProductByIdQuery(parseInt(num));
