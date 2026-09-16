@@ -1,6 +1,6 @@
 import { useUpdateProductMutation } from "../services/dummyData";
 
-const UpdateData = ({ id }: any) => {
+const UpdateData = ({ id }: number) => {
   const [addNewProduct, { data, isLoading, error }] =
     useUpdateProductMutation();
   const handleClick = async () => {
