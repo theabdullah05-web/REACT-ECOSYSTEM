@@ -1,7 +1,7 @@
 import UpdateData from "./components/UpdateData";
 
 const App = () => {
-  return <UpdateData />;
+  return <UpdateData id={4} />;
 };
 
 export default App;
