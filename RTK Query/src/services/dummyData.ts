@@ -38,12 +38,12 @@ export const productApi = createApi({
         body: updatedProduct,
       }),
     }),
-    deleteProduct:builder.mutation<Product,{id:number}>({
-      query:({id})=>{
+    deleteProduct: builder.mutation<Product, number>({
+      query: (id) => ({
         url: `products/${id}`,
         method: "Put",
-      }
-    })
+      }),
+    }),
   }),
 });
 export const {
