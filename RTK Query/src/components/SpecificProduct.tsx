@@ -11,12 +11,13 @@ const SpecificProduct = () => {
   }
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    useGetProductByIdQuery(parseInt(num));
+    let id = parseInt(num);
+    if (Number.isNaN(id) || id <= 0) {
+      return;
+    }
+    useGetProductByIdQuery(id);
   };
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    new Promise<void>((resolve) => {
-      setTimeout(resolve, 10000);
-    });
     setNum(e.target.value);
   };
   return (
