@@ -20,7 +20,7 @@ const SpecificProduct = () => {
         <button type="submit">Submit</button>
         {data?.products.map((el) => (
           <>
-            <h2 key={el.id}>{el.title}</h2>
+            <h2 key={Math.random()}>{el.title}</h2>
             <p>{el.description}</p>
           </>
         ))}
