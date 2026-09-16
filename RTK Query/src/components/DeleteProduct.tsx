@@ -1,6 +1,6 @@
 import { useDeleteProductMutation } from "../services/dummyData";
 
-const DeleteProduct = ({ id: number }) => {
+const DeleteProduct = ({ id }: { id: number }) => {
   const [deleteProduct, { data, isLoading, error }] =
     useDeleteProductMutation();
   const handleClick = () => {
