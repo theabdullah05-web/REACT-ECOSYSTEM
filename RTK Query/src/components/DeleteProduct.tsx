@@ -15,9 +15,7 @@ const DeleteProduct = ({ id }: { id: number }) => {
     <>
       {data ? (
         <>
-          <p>{data.id}</p>
-          <p>{data.title}</p>
-          <p>{data.description}</p>
+          <p>{data.title} successfully deleted</p>
         </>
       ) : (
         <></>
