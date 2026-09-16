@@ -1,7 +1,7 @@
 import { useUpdateProductMutation } from "../services/dummyData";
 
 const UpdateData = ({ id }: any) => {
-  const [addNewProduct, { data, isLoading, error }] =
+  const [updateProduct, { data, isLoading, error }] =
     useUpdateProductMutation();
   const handleClick = async () => {
     const updatedProduct = {
@@ -9,7 +9,7 @@ const UpdateData = ({ id }: any) => {
       title: "Product Updated",
       description: "One of the best updated Products",
     };
-    await addNewProduct({ id, updatedProduct });
+    await updateProduct({ id, updatedProduct });
   };
   if (error) {
     return <h1>Some Error Occured</h1>;
