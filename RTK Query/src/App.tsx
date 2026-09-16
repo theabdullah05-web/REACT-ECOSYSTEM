@@ -1,7 +1,7 @@
-import UpdateData from "./components/UpdateData";
+import DeleteProduct from "./components/DeleteProduct";
 
 const App = () => {
-  return <UpdateData id={4} />;
+  return <DeleteProduct id={4} />;
 };
 
 export default App;
