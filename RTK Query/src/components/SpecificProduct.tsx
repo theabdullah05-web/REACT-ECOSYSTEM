@@ -20,8 +20,8 @@ const SpecificProduct = () => {
         <button type="submit">Submit</button>
         {data ? (
           <>
-            <h2 key={Math.random()}>{data.products[0].title}</h2>
-            <p>{data.products[0].description}</p>
+            <h2 key={Math.random()}>{data.title}</h2>
+            <p>{data.description}</p>
           </>
         ) : (
           <></>
