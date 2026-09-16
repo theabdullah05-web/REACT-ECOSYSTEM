@@ -14,6 +14,9 @@ const SpecificProduct = () => {
     useGetProductByIdQuery(parseInt(num));
   };
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    new Promise<void>((resolve) => {
+      setTimeout(resolve, 10000);
+    });
     setNum(e.target.value);
   };
   return (
