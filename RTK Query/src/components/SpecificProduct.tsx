@@ -13,10 +13,13 @@ const SpecificProduct = () => {
     e.preventDefault();
     useGetProductByIdQuery(parseInt(num));
   };
+  const handleChange = (e: InputEvent) => {
+    setNum(e.target.value);
+  };
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input value={num} onChange={(e) => setNum(e.target.value)} />
+        <input value={num} onChange={handleChange} />
         <button type="submit">Submit</button>
         {data ? (
           <>
