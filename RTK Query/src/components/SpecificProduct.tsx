@@ -4,7 +4,7 @@ import { useGetProductByIdQuery } from "../services/dummyData";
 const SpecificProduct = () => {
   const [num, setNum] = useState<string>("");
   const [productId, setProductId] = useState<number>(1);
-  const { data, error, isLoading } = useGetProductByIdQuery(parseInt(1));
+  const { data, error, isLoading } = useGetProductByIdQuery(productId);
   if (error) {
     return <h1>Some Error Occured</h1>;
   } else if (isLoading) {
