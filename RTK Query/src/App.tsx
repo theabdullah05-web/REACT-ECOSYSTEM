@@ -1,5 +1,7 @@
+import AllData from "./components/AllData";
+
 const App = () => {
-  return <div>App</div>;
+  return <AllData />;
 };
 
 export default App;
