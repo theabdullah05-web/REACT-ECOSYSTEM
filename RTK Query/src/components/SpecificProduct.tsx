@@ -18,12 +18,14 @@ const SpecificProduct = () => {
       <form onSubmit={handleSubmit}>
         <input value={num} onChange={(e) => setNum(e.target.value)} />
         <button type="submit">Submit</button>
-        {data?.products.map((el) => (
+        {data ? (
           <>
-            <h2 key={Math.random()}>{el.title}</h2>
-            <p>{el.description}</p>
+            <h2 key={Math.random()}>{data.title}</h2>
+            <p>{data.description}</p>
           </>
-        ))}
+        ) : (
+          <></>
+        )}
       </form>
     </>
   );
