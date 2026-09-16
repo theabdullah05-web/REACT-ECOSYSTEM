@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 import { useGetProductByIdQuery } from "../services/dummyData";
 
 const SpecificProduct = () => {
@@ -13,7 +13,7 @@ const SpecificProduct = () => {
     e.preventDefault();
     useGetProductByIdQuery(parseInt(num));
   };
-  const handleChange = (e: InputEvent) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setNum(e.target.value);
   };
   return (
