@@ -1,15 +1,31 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+type Product = {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
+  brand: string;
+  thumbnail: string;
+  images: string[];
+};
 
-export const dummyApi = createApi({
+type ProductsResponse = {
+  products: Product[];
+  total: number;
+  skip: number;
+  limit: number;
+};
+export const productApi = createApi({
   reducerPath: "products",
   baseQuery: fetchBaseQuery({ baseUrl: "https://dummyjson.com" }),
   endpoints: (builder) => ({
-    getAllProducts: builder.query<any, any>({
-      query: (name) => `pokemon/${name}`,
+    getAllProducts: builder.query<ProductsResponse, void>({
+      query: () => `/products`,
     }),
   }),
 });
-
-// Export hooks for usage in functional components, which are
-// auto-generated based on the defined endpoints
-export const { useGetAllProductsQuery } = dummyApi;
+export const { useGetAllProductsQuery } = productApi;
