@@ -32,10 +32,10 @@ export const productApi = createApi({
       Product,
       { id: number; updatedProduct: Product }
     >({
-      query: ({ id, ...newData }) => ({
+      query: ({ id, updatedProduct }) => ({
         url: `products/${id}`,
         method: "Put",
-        body: newData,
+        body: updatedProduct,
       }),
     }),
   }),
