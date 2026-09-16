@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { useGetProductByIdQuery } from "../services/dummyData";
 
 const SpecificProduct = () => {
-  const [num, setNum] = useState<string>("");
+  const [num, setNum] = useState<string>("0");
   const { data } = useGetProductByIdQuery(parseInt(num));
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
