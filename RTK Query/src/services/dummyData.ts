@@ -28,6 +28,16 @@ export const productApi = createApi({
         body: newData,
       }),
     }),
+    updateProduct: builder.mutation<
+      Product,
+      { id: number; updatedProduct: Product }
+    >({
+      query: ({ id, ...newData }) => ({
+        url: `products/${id}`,
+        method: "Put",
+        body: newData,
+      }),
+    }),
   }),
 });
 export const {
