@@ -2,7 +2,7 @@ import { useState, type ChangeEvent, type FormEvent } from "react";
 import { useGetProductByIdQuery } from "../services/dummyData";
 
 const SpecificProduct = () => {
-  const [num, setNum] = useState<string>("1");
+  const [num, setNum] = useState<string>("");
   const { data, error, isLoading } = useGetProductByIdQuery(parseInt(num));
   if (error) {
     return <h1>Some Error Occured</h1>;
