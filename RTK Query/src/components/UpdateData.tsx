@@ -5,7 +5,7 @@ const UpdateData = ({ id }: any) => {
     useUpdateProductMutation();
   const handleClick = async () => {
     const updatedProduct = {
-      id: Math.floor(Math.random() * 1000) + 1,
+      id: id,
       title: "Product Updated",
       description: "One of the best updated Products",
     };
