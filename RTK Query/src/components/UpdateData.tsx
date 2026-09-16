@@ -27,7 +27,7 @@ const UpdateData = ({ id }: any) => {
       ) : (
         <></>
       )}
-      <button onClick={handleClick}>Add Data</button>
+      <button onClick={handleClick}>Update Data</button>
     </>
   );
 };
