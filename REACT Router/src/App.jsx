@@ -1,4 +1,9 @@
-import { createBrowserRouter, NavLink, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  NavLink,
+  Outlet,
+  RouterProvider,
+} from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Dashboard from "./components/Dashboard";
@@ -31,6 +36,7 @@ const router = createBrowserRouter([
       <>
         <Nav />
         <Dashboard />
+        <Outlet />
       </>
     ),
     children: [
