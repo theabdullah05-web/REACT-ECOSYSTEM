@@ -2,8 +2,9 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const Student = () => {
   let { id } = useParams();
+  const navigate = useNavigate();
   const handleClick = () => {
-    useNavigate("/dashboard");
+    navigate("/dashboard");
   };
   return (
     <>
