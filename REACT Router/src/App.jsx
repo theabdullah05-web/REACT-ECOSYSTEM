@@ -3,7 +3,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Dashboard from "./components/Dashboard";
 import Nav from "./components/Nav";
-
+import "./style.css";
 const router = createBrowserRouter([
   {
     path: "/",
