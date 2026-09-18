@@ -9,8 +9,8 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <>
-        <Home />
         <Nav />
+        <Home />
       </>
     ),
   },
@@ -18,8 +18,8 @@ const router = createBrowserRouter([
     path: "/about",
     element: (
       <>
-        <About />
         <Nav />
+        <About />
       </>
     ),
   },
