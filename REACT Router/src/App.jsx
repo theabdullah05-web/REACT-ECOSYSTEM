@@ -11,6 +11,7 @@ import Nav from "./components/Nav";
 import "./style.css";
 import Student from "./components/Student";
 import Notes from "./components/Notes";
+import Error from "./components/Error";
 const router = createBrowserRouter([
   {
     path: "/",
