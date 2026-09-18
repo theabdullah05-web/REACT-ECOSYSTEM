@@ -1,16 +1,27 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, NavLink, RouterProvider } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Dashboard from "./components/Dashboard";
+import Nav from "./components/Nav";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <>
+        <Home />
+        <Nav />
+      </>
+    ),
   },
   {
     path: "/about",
-    element: <About />,
+    element: (
+      <>
+        <About />
+        <Nav />
+      </>
+    ),
   },
   {
     path: "/dashboard",
