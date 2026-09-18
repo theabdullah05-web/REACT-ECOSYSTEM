@@ -4,6 +4,7 @@ import About from "./components/About";
 import Dashboard from "./components/Dashboard";
 import Nav from "./components/Nav";
 import "./style.css";
+import Student from "./components/Student";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,15 @@ const router = createBrowserRouter([
       <>
         <Nav />
         <Dashboard />
+      </>
+    ),
+  },
+  {
+    path: "/student/:id",
+    element: (
+      <>
+        <Nav />
+        <Student />
       </>
     ),
   },
