@@ -55,7 +55,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "*",
+    path: "*/splat",
     element: <Error />,
   },
 ]);
