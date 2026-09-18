@@ -3,9 +3,21 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <>
-      <NavLink to={"/"}>Home</NavLink>
-      <NavLink to={"/about"}>About</NavLink>
-      <NavLink to={"/dashboard"}>Dashboard</NavLink>
+      <NavLink to={"/"} className={(isActive) => (isActive ? "active" : "")}>
+        Home
+      </NavLink>
+      <NavLink
+        to={"/about"}
+        className={(isActive) => (isActive ? "active" : "")}
+      >
+        About
+      </NavLink>
+      <NavLink
+        to={"/dashboard"}
+        className={(isActive) => (isActive ? "active" : "")}
+      >
+        Dashboard
+      </NavLink>
     </>
   );
 };
