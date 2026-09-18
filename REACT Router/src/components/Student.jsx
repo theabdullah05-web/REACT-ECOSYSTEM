@@ -1,11 +1,14 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Student = () => {
   let { id } = useParams();
+  const handleClick = () => {
+    useNavigate("/dashboard");
+  };
   return (
     <>
       {id}
-      <button>Go to Dashboard</button>
+      <button onClick={handleClick}>Go to Dashboard</button>
     </>
   );
 };
