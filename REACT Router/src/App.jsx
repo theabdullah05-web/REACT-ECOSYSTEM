@@ -36,7 +36,6 @@ const router = createBrowserRouter([
       <>
         <Nav />
         <Dashboard />
-        <Outlet />
       </>
     ),
     children: [
