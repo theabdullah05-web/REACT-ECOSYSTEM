@@ -5,6 +5,7 @@ import Dashboard from "./components/Dashboard";
 import Nav from "./components/Nav";
 import "./style.css";
 import Student from "./components/Student";
+import Notes from "./components/Notes";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +33,12 @@ const router = createBrowserRouter([
         <Dashboard />
       </>
     ),
+    children:[
+      {
+        path:"notes"
+        element:<Notes/>
+      }
+    ]
   },
   {
     path: "/student/:id",
