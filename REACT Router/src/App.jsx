@@ -33,12 +33,12 @@ const router = createBrowserRouter([
         <Dashboard />
       </>
     ),
-    children:[
+    children: [
       {
-        path:"notes"
-        element:<Notes/>
-      }
-    ]
+        path: "notes",
+        element: <Notes />,
+      },
+    ],
   },
   {
     path: "/student/:id",
