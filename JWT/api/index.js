@@ -8,7 +8,7 @@ const users = [
     password: "4256ab4256",
     isAdmin: true,
   },
-  { id: 1, username: "Abdullah", password: "4256ab4256", isAdmin: true },
+  { id: 2, username: "John Doe", password: "12345", isAdmin: false },
 ];
 
 app.listen(8080, () => {
