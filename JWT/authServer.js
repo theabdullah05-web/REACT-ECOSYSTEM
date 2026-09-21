@@ -6,6 +6,21 @@ app.use(express.json());
 
 let refreshTokens = [];
 
+const users = [
+  {
+    username: "Abdullah",
+    password: "$2b$10$IFmawNbmXDActxmgSyrM6uNAv8rJ08XPPy6X9umpoulWhDoqMVGOq",
+  },
+  {
+    username: "john",
+    password: "$2b$10$Tp3cCY3d.5dgIrvXdoUpX.HoOq5vQgMc.2wP22oJMHHuTYrdRNnjG",
+  },
+  {
+    username: "Doom",
+    password: "$2b$10$i7u2VfTwOpCJ.25DdPDbve5GsEeDuzkrSUB.N01wPyburLm1FM3LK",
+  },
+];
+
 const generateAccessToken = (user) => {
   return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "15s" });
 };
