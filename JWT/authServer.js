@@ -46,7 +46,7 @@ app.post("/login", async (req, res) => {
   }
   try {
     if (!bcrypt.compare(password, user1.password)) {
-      res.send("Not Allowed");
+      return res.send("Not Allowed");
     }
   } catch (e) {
     res.send(err);
