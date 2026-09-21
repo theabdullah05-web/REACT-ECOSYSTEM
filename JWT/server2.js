@@ -4,11 +4,6 @@ const app = express();
 const jwt = require("jsonwebtoken");
 app.use(express.json());
 
-const users = [
-  { username: "Abdullah", title: "Post 1" },
-  { username: "John Doe", title: "Post 2" },
-];
-
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers["authorization"];
   const token = authHeader && authHeader.split(" ")[1];
@@ -36,6 +31,6 @@ app.post("/login", (req, res) => {
   res.json({ accessToken: accessToken });
 });
 
-app.listen(8080, () => {
-  console.log("app is listening on port 8080");
+app.listen(3000, () => {
+  console.log("app is listening on port 3000");
 });
