@@ -8,7 +8,7 @@ const users = [
   { username: "John Doe", title: "Post 2" },
 ];
 
-app.get("/", (req, res) => {
+app.get("/posts", (req, res) => {
   res.json(users);
 });
 
