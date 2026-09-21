@@ -5,10 +5,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 app.use(express.json());
 
-const users = [
-  { username: "Abdullah", title: "Post 1" },
-  { username: "John Doe", title: "Post 2" },
-];
+const users = [];
 
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers["authorization"];
