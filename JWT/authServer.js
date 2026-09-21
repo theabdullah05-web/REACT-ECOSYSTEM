@@ -7,11 +7,6 @@ app.use(express.json());
 const generateAccessToken = (user) => {
   jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "15s" });
 };
-
-app.get("/posts", (req, res) => {
-  res.json(users.filter((el) => el.username === req.user.name));
-});
-
 app.post("/login", (req, res) => {
   //Authentication
   const { username } = req.body;
