@@ -45,7 +45,7 @@ app.post("/login", async (req, res) => {
     return res.send("User not found");
   }
   try {
-    if (bcrypt.compare(password, user1.password)) {
+    if (await bcrypt.compare(password, user1.password)) {
       console.log("success");
     } else {
       return res.send("Not Allowed");
