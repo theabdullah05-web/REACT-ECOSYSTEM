@@ -33,7 +33,6 @@ app.post("/users", async (req, res) => {
     username: username,
     password: hashedPassword,
   });
-  console.log(users);
   res.json(users);
 });
 
