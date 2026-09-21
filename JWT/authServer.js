@@ -41,7 +41,7 @@ app.post("/refreshToken", (req, res) => {
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
   const user1 = users.find((el) => el.username == username);
-  if (user1 === null) {
+  if (!user1) {
     return res.send("User not found");
   }
   try {
