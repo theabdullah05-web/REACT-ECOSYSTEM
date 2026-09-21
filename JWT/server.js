@@ -12,6 +12,11 @@ app.get("/", (req, res) => {
   res.json(users);
 });
 
+app.post("/login", (req, res) => {
+  //Authentication
+  const { username } = req.body;
+});
+
 app.listen(8080, () => {
   console.log("app is listening on port 8080");
 });
