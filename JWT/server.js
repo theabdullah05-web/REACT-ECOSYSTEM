@@ -7,7 +7,7 @@ const users = [
 ];
 
 app.get("/", (req, res) => {
-  res.json;
+  res.json(users);
 });
 
 app.listen(8080, () => {
