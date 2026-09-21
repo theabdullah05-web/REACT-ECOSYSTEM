@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 app.use(express.json());
 
 const generateAccessToken = (user) => {
-  jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "15s" });
+  return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "15s" });
 };
 app.post("/login", (req, res) => {
   //Authentication
