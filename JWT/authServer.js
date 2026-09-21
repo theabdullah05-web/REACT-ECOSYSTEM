@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const jwt = require("jsonwebtoken");
+const bcrypt=require("bcrypt")
 app.use(express.json());
 
 let refreshTokens = [];
@@ -37,9 +38,17 @@ app.post("/refreshToken", (req, res) => {
   });
 });
 
-app.post("/login", (req, res) => {
-  //Authentication
-  const { username } = req.body;
+app.post("/login", async(req, res) => {
+    const { username,password } = req.body;
+  const user1=users.find(el=>el.username==username)
+  if(user1===null){
+    return res.send("User not found")
+  }
+  try{
+    if(!bcrypt.compare(password,user1.password)){
+      res.send("Not Allowed")
+    }
+  }
   const user = { name: username };
 
   const accessToken = generateAccessToken(user);
