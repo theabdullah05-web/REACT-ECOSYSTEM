@@ -36,6 +36,7 @@ app.post("/users", async (req, res) => {
     username: username,
     password: hashedPassword,
   });
+  console.log(users);
 });
 
 app.get("/posts", authenticateToken, (req, res) => {
