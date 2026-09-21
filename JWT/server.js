@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const jwt = require("jsonwebtoken");
+app.use(express.json());
 
 const users = [
   { username: "Abdullah", title: "Post 1" },
