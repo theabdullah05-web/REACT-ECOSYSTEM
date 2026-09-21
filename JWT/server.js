@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 app.use(express.json());
 
 const users = [
@@ -23,6 +24,20 @@ const authenticateToken = (req, res, next) => {
     next();
   });
 };
+
+app.get("/users", (req, res) => {
+  res.json(users);
+});
+
+app.post("/users", async (req, res) => {
+  const { username, password } = req.body;
+  const hashedPassword = await bcrypt.hash(password, 10);
+  users.push({
+    username: username,
+    password: hashedPassword,
+  });
+});
+
 app.get("/posts", authenticateToken, (req, res) => {
   res.json(users.filter((el) => el.username === req.user.name));
 });
