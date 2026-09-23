@@ -171,7 +171,7 @@ Suggestions and improvements are welcome. Feel free to open an issue or submit a
 
 ## 📄 License
 
-Add your preferred license here (for example, MIT).
+No license has been specified for this project — all rights reserved by default.
 
 ---
 
